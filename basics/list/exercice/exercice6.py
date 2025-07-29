@@ -39,3 +39,5 @@ else:
     print("le produit A*B")
     for i in C:
         print(i)
+
+#rq en peut utiliser les fonctions pour reduire le travail
