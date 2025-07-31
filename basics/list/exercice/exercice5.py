@@ -36,10 +36,31 @@ for i in C:
 
 #methode ~2
 #en peut utiliser la fonction zip pour calculer la somme de deux matrice
-somme=[]
-for i,j in zip(A,B):
-    ligne=[]
-    for k,t in zip(i,j):
-        ligne.append(k+t)
-    somme.append(ligne)
+# # Deux matrices d'exemple
+# matrix_a = [
+#     [1, 2, 3],
+#     [4, 5, 6]
+# ]
 
+# matrix_b = [
+#     [7, 8, 9],
+#     [10, 11, 12]
+# ]
+
+# # Résultat vide
+# result = []
+
+# # Parcourir les lignes
+# for row_a, row_b in zip(matrix_a, matrix_b):
+#     # Nouvelle ligne vide
+#     new_row = []
+#     # Parcourir les éléments de chaque ligne
+#     for elem_a, elem_b in zip(row_a, row_b):
+#         new_elem = elem_a + elem_b
+#         new_row.append(new_elem)
+#     # Ajouter la ligne calculée au résultat
+#     result.append(new_row)
+
+# # Affichage du résultat
+# for row in result:
+#     print(row)
