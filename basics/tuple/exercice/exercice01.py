@@ -1,0 +1,11 @@
+# le tuple est une séquence de données ordonnées (,) ,de 0 à n-1
+# la taille d'une tuple ne peut pas être modifier une fois qu'il est créé(a une taille fixe)
+# ne nous pouvons pas ajouter,modifier ou supprimer des éléments d'un tuple après sa création
+# un tuple peut contenir différent types d'éléments(string,booléen,int,float,..)
+# le tuple peut contenir des doublons
+
+#création
+amis=("adel","yassine","samia","samir")
+tupleA=(10,20,True,30,False,2.23,"hello",5+10)
+tupleB="maroc","egypt","algerie","souria"
+tupleC=tuple((1,2,3,4,5))
