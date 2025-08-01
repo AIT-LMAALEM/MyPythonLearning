@@ -31,6 +31,9 @@ n=int(input("entrer un nombre entier non null:"))
 #Slicing
 amis=("anouar","radi","soufiane","samir")
 print(amis[:3])
+print(amis[1:])
+print(amis[::2])
+print(amis[-1::-1])
 
 
 
