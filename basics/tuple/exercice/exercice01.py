@@ -23,9 +23,14 @@ print(math[0])
 print(math[-1])
 
 n=int(input("entrer un nombre entier non null:"))
-print(tuple(range(1,n+1)))
-print(tuple(range(0,n+1,2)))
-print(tuple(range(1,n+1,2)))
+# print(tuple(range(1,n+1)))
+# print(tuple(range(0,n+1,2)))
+# print(tuple(range(1,n+1,2)))
+
+
+#Slicing
+amis=("anouar","radi","soufiane","samir")
+print(amis[:3])
 
 
 
