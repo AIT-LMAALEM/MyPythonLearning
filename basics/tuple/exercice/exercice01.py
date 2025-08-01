@@ -14,3 +14,33 @@ tupleD=tuple("mohamade") #=>('m','o','h','a','m','a','d','e')
 
 #créer un tuple contenant les nombre de 5 à 100
 nombre=tuple(range(5,101))
+nombre_pair=tuple(range(0,100,2))
+print(nombre_pair)
+
+# affichage d'un élèment
+math=("analyse","algebre","probabilité","geometrie","statistique")
+print(math[0])
+print(math[-1])
+
+n=int(input("entrer un nombre entier non null:"))
+print(tuple(range(1,n+1)))
+print(tuple(range(0,n+1,2)))
+print(tuple(range(1,n+1,2)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
