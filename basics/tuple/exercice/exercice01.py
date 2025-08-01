@@ -9,3 +9,8 @@ amis=("adel","yassine","samia","samir")
 tupleA=(10,20,True,30,False,2.23,"hello",5+10)
 tupleB="maroc","egypt","algerie","souria"
 tupleC=tuple((1,2,3,4,5))
+tupleD=tuple("mohamade") #=>('m','o','h','a','m','a','d','e')
+
+
+#créer un tuple contenant les nombre de 5 à 100
+nombre=tuple(range(5,101))
