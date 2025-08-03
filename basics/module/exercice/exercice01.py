@@ -24,3 +24,6 @@ numbres=[0,1,2,3,4,5,6,7,8,9]
 print(random.choice(numbres))
 print(random.choices(numbres,k=2))
 print(random.choices(numbres,k=6))
+
+random.shuffle(numbres) # resultat aleatoires
+print(numbres)
