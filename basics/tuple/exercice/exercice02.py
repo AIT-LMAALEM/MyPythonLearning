@@ -93,5 +93,3 @@ print(lettre.index('y'))
 
 
 
-
-
