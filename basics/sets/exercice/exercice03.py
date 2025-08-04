@@ -57,11 +57,40 @@ f={1,6,98,11,10,111}
 # ope:<
 a={1,2,3,4,5,6,7,8,9}
 b={1,2,3,4,5,6}
-if b<=a:
-    print("b inclue dans a")
-else:
-    print("b n'est pas inclue dans a")
+# if b<=a:
+#     print("b inclue dans a")
+# else:
+#     print("b n'est pas inclue dans a")
 
+
+
+
+
+
+#sur_ensemble: A est sur-ensemble de B si tous les elements de B sont aussi des elemenets de A. on dit alors que A contient B
+# A.issupset(B)
+#A>=B
+#A>B
+print(a>=b)
+print(b>=a)
+
+
+
+
+#egalite: A est identique à B si les deux ensembles contiennent les memes elements
+#==
+k={True,0}
+g={False,1}
+print(k==g)
+
+
+
+
+#disjonction: si leur intersection est vide ,pas d'élement en commun
+# A.isdisjoint()
+n={"hello","bonjour",True}
+m={"mhamed","rida",False}
+print(n.isdisjoint(m))
 
 
 
