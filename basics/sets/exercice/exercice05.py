@@ -30,6 +30,25 @@ for i in list_texte2:
     sans_espace+=i
 print("les caractères qui composent le texte est:",set(sans_espace))
 
-    
+
+#methode 2
+texte = "  Bonjour le  monde  !  "
+texte_sans_espaces = ""
+
+for caractere in texte:
+    if caractere != " ":  # Si le caractère n'est pas un espace
+        texte_sans_espaces += caractere  # On l'ajoute à la nouvelle chaîne
+
+print(set(texte_sans_espaces) ) 
+
+#methode 3
+texte = "  Bonjour le  monde  !  "
+texte_sans_espaces = texte.replace(" ", "")
+print(set(texte_sans_espaces) ) 
+
+#methode 4
+texte = "  Bonjour le  monde  !  "
+texte_sans_espaces = "".join(texte.split())
+print(set(texte_sans_espaces) )     
 
 
