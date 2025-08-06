@@ -13,3 +13,4 @@ amis=(("mhamed","anouar","ismaail","rayan"),(13,24,12,18))
 for ligne in amis:
     for colonne in ligne:
         print(colonne)
+    
