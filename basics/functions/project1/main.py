@@ -6,11 +6,13 @@ random_word=random.choice(words)
 display=[]
 for i in range(len(random_word)):
     display.append("_")
-    print("_",end=" ")
+print(" ".join(display))
+
+# en peut aussi faire : display=["_"]*len(random_word)   sans boucle for
 
 lives=6
 while "_" in display and lives >0:
-    guessed=input("\nguess a letter:").lower()
+    guessed=input("guess a letter:").lower()
     if guessed not in random_word:
         lives-=1
 
@@ -18,10 +20,8 @@ while "_" in display and lives >0:
          if guessed==random_word[j]:
            display[j]=guessed
 
-    for i in display:
-        print(i,end=" ")
-
-    print("\nyou have ",lives," more tries")
+    print(" ".join(display))
+    print("you have ",lives," more tries\n")
     
 
 if lives==0:
