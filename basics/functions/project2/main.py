@@ -1,11 +1,20 @@
-# encrypted word
+# encrypted sentence
 import string
 alphabet=string.ascii_lowercase
-word= input("Please type a word:").lower()
-encrypted_word=""
-for letter in word:
-    original_position=alphabet.index(letter)
-    new_position=original_position +3
-    encrypted_word += alphabet[new_position]
-print(" Here is the encrypted word :",encrypted_word)
+sentence= input("Please type a sentence:").lower()
+step=int(input("enter the step:"))
+encrypted_sentence=""
+for letter in sentence:
+    if letter in alphabet:
+        original_position=alphabet.index(letter)
+        new_position= (original_position +step)%26
+        encrypted_sentence+=alphabet[new_position]
+    else:
+        encrypted_sentence+=" "
+print("Here is the encrypted sentence: ",encrypted_sentence)
+
+        
+
+
+
 
