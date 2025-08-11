@@ -19,3 +19,14 @@ info={
 }
 tuples_list=[(key,info[key]) for key in info]
 print(tuples_list)
+tuples_list=[(key,info[key]) for key in info if type(info[key])==int]
+print(tuples_list)
+
+
+reminder=[0 if (x%2==0) else 1 for x in range(20)]
+print(reminder)
+
+
+
+names=["rachid","omar","zaineb","amine","soufiane"]
+print([name[0] for name in names])
