@@ -2,6 +2,8 @@ class Book:
     title = ""
     auther = ""
     pages = 0
+    
+
 
 my_book= Book()
 my_book.title= "Origin"
@@ -16,4 +18,7 @@ seconde_book= Book()
 seconde_book.title= "the 99"
 seconde_book.auther= "Paula Hawkins"
 seconde_book.pages=250
+
+
+
 
