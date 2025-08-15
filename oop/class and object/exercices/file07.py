@@ -1,6 +1,11 @@
-#  user management
-users={}
-class Users:
+#  user management -v2
+import os
+import time
+
+def clear_screen():
+    os.system("cls" if os.name=="nt" else "clear")
+
+class User:
     def __init__(self,first_name,last_name,email,password,status="inactive"):
         self.first_name=first_name
         self.last_name=last_name
@@ -8,50 +13,51 @@ class Users:
         self.password=password
         self.status=status
     
+    def disaplay(self):
+        print(f"Fist name :{self.first_name}")
+        print(f"Last name:{self.last_name}")
+        print(f"Email:{self.email}")
+        print(f"Password:{self.password}")
+        print("_"*20)
     
-def create_user():
+def creat_user():
     first_name=input("enter the first name:")
-    last_name= input("enter the last name:")
-    email=input("enter the email:")
-    password=input("enter the password:")
-    return Users(first_name,last_name,email,password)
+    last_name=input("enter the last name:")
+    email=input("enter the Email:")
+    password=input("enter tha Password:")
+    return User(first_name,last_name,email,password)
 
-print("Welcome to user management....\n")
-print("choose an Action:\n")
-print("1.Add user \n2.Display user \n3.Exit \n")
 
-num=1
+new_users=[]
 while True:
-    choice=input("\nenter your choice:")
-    if choice.isdigit():
-        
-        if int(choice)==1:
-             user=create_user()
-             users[num] = {
-                "first name": user.first_name,
-                "last name": user.last_name,
-                "email": user.email,
-                "password": user.password,
-                "status": user.status
-             }
-             print("User added successfully!")
-             num += 1
-             
-        elif int(choice)==2:
-            print("Displaying all users....\n")
-            for i ,info in users.items():
-                for key,value in info.items():
-                     print(f"{key}:{value}")
-                print("----------------------------")
-        elif int(choice)==3:
-            print("Excting...")
-            break
+    print("\nWelcome to user management\n")
+    print("\nchoose an actions\n")
+    print("1.Add new user")
+    print("2.Display all users")
+    print("3.Exit\n")
+    choice=input("Enter your choice:")
+
+    if choice=='1':
+        new_users.append(creat_user())
+        print("User added successfuly!")
+        time.sleep(2)
+    elif choice=='2':
+        if new_users:
+            clear_screen()
+            print("Displayning all new_users....")
+            time.sleep(1)
+            for i in new_users:
+                i.disaplay()
+            time.sleep(1)
         else:
-            print("Your choice is incorrect")
-
+            print("Sorry, didn't find any user to disaplay")
+            time.sleep(2)
+    elif choice=='3':
+        print("Exiting...")
+        break
     else:
-        print("Please enter a number (1, 2 or 3)")
+        print("Envalid choice! Please try again.")
 
 
-    
+
 
