@@ -30,6 +30,7 @@ def forward(x):
         button_back.config(state=DISABLED)
     else:
         button_back.config(state=NORMAL,command=lambda:back(x-1))
+    status.config(text=f"Image {index +1} of {len(img_list)}")
        
 
     
@@ -46,6 +47,7 @@ def back(x):
         button_back.config(state=DISABLED)
     else:
         button_back.config(state=NORMAL,command=lambda:back(x-1))
+    status.config(text=f"Image {index +1} of {len(img_list)}")
 
 
 button_back=Button(root,text="<<",command=lambda:back(0),state=DISABLED)
@@ -55,6 +57,9 @@ button_forward=Button(root,text=">>",command=lambda:forward(1))
 button_back.grid(row=1,column=0)
 button_quit.grid(row=1,column=1)
 button_forward.grid(row=1,column=2)
+
+status=Label(text=f"Image {index +1} of {len(img_list)}")
+status.grid(row=2,column=2)
 
 
 
