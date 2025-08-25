@@ -24,3 +24,5 @@ for grad, res in zip(grades,result):
 words=["on","apple","holdBack","braveMan","today"]
 words_l=[word.upper() if len(word)<=3 else word.lower() for word in words]
 print(words_l)
+
+
