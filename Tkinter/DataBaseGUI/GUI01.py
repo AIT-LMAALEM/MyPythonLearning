@@ -40,7 +40,21 @@ def query():
     db.commit()
     db.close()
 
+def delete():
+    ask=Label(root,text="Enter Zipcode")
+    ask.grid(row=9,column=0,padx=10)
+    ask_zipcode=Entry(root,width=35)
+    ask_zipcode.grid(row=9,column=1,padx=20)
 
+    db=sqlite3.connect("addressApp.db")
+    cr=db.cursor()
+    cr.execute(f"DELETE FROM addresses WHERE zipcode='{ask_zipcode.get()}'")
+    
+    
+    db.commit()
+    db.close()
+
+    
 
 
 
@@ -93,6 +107,8 @@ submit_bt.grid(row=6,column=0,columnspan=2,pady=10,padx=10,ipadx=5)
 query_btn=Button(root,text="Show Records",command=query)
 query_btn.grid(row=7,column=0,columnspan=2,padx=10,pady=10,ipadx=34)
 
+delete_btn=Button(root,text="Delete Records",command=delete)
+delete_btn.grid(row=8,column=0,columnspan=2,padx=10,pady=10,ipadx=34)
 
 
 
