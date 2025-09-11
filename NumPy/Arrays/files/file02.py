@@ -46,7 +46,7 @@ print(d.ndim)
 
 
 # Customn Dimensions
-
 vab=np.array([1,2,3],ndmin=3)
+
 print(vab)
 print(vab[0][0][1])
